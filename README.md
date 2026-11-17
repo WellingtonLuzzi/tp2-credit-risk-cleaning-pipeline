@@ -37,7 +37,7 @@ A base bruta possui **2.500 registros × 8 colunas** (`id_cliente`, `idade`, `re
 
 **Fase 3 — Engenharia de features e análise multivariada**
    * **Discretização (binning):** criação da variável categórica ordinal `faixa_etaria` via `pd.cut` (`Jovem`: 18–29 anos [512], `Adulto`: 30–59 anos [1.876], `Sênior`: 60+ anos [97]).
-   * **Escalonamento (feature Scaling):** normalização no intervalo `[0, 1]` via `MinMaxScaler` nas variáveis contínuas (`idade_scale`, `renda_scale`, `tempo_emprego_scale`, `divida_scale` e `score_scale`).
+   * **Escalonamento (feature scaling):** normalização no intervalo `[0, 1]` via `MinMaxScaler` nas variáveis contínuas (`idade_scale`, `renda_scale`, `tempo_emprego_scale`, `divida_scale` e `score_scale`).
    * **Matriz de correlação de Pearson:** identificação de forte correlação positiva (`0.74`) entre `renda_scale` e `divida_scale` (clientes com maior renda acessam maiores limites de crédito) e ausência de multicolinearidade crítica entre os demais preditores.
 <p align="center">
   <img src="heatmap_correlacoes_TP2.png" alt="heatmap_correlacoes_TP2" width="700">
